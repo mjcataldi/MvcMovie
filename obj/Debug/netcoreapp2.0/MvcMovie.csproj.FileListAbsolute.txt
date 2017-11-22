@@ -8,3 +8,4 @@ C:\Users\mcata\OneDrive\Documents\VSCode\MvcMovie\obj\Debug\netcoreapp2.0\MvcMov
 C:\Users\mcata\OneDrive\Documents\VSCode\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.AssemblyInfo.cs
 C:\Users\mcata\OneDrive\Documents\VSCode\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.dll
 C:\Users\mcata\OneDrive\Documents\VSCode\MvcMovie\obj\Debug\netcoreapp2.0\MvcMovie.pdb
+c:\Users\mcata\OneDrive\Documents\VSCode\mvcmovie\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

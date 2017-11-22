@@ -4,7 +4,7 @@ using System.Text.Encodings.Web;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
-
+using System.IO;
 
 namespace MvcMovie.Controllers
 {
@@ -35,11 +35,13 @@ namespace MvcMovie.Controllers
             var name = HttpContext.Session.GetString("_Name");
             var yearsMember = HttpContext.Session.GetInt32("_YearsMember");
             var date = HttpContext.Session.GetString("_Date");
+            var content = $"My name is { name } and I have been a member for { yearsMember } years.\nToday is { date }.";
+            content += $"{ Directory.GetCurrentDirectory() }";
 
             // HttpContext.Session.Remove("_Name");
             // HttpContext.Session.Clear();
             // HttpContext.Session.
-            return Content($"My name is { name } and I have been a member for { yearsMember } years.\nToday is { date }.");
+            return Content(content);
         }
 
         // GET: /HelloWorld/Welcome/ 
@@ -48,9 +50,9 @@ namespace MvcMovie.Controllers
 
             ViewData["Message"] = $"Hello {name}.";
             ViewData["NumTimes"] = numTimes;
+            // HtmlEncoder.Default.Encode helps prevent against malicious input from namely JavaScript
 
             return View();
-            // HtmlEncoder.Default.Encode helps prevent against malicious input from namely JavaScript
             //  return HtmlEncoder.Default.Encode($"Hello {name}, ID: {ID}.");
         }
     }
