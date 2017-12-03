@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+<address>
+    One Microsoft Way<br />
+    Redmond, WA 98052-6399<br />
+    <abbr title="Phone">P:</abbr>
+    425.555.0100
+</address>
+
+<address>
+    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>
+
+<article>
+    <header>
+        <h1>Header one outside</h1>
+        <hgroup>
+            <h1>Header one inside</h1>
+        </hgroup>
+    </header>
+    <section>
+        @{
+            int minValue = 0;
+            int maxValue = 500;
+            Random random = new Random();
+            int currentValue = random.Next(minValue, maxValue);
+        }
+        <header>Help us with our <mark>fundraiser</mark></header>
+        <!-- there is a <mark> element that functions more or less as a highlighter -->
+        <span>@minValue</span>
+            <progress value=@currentValue max=@maxValue></progress>
+        <span>@maxValue</span><br />         
+            <progress max="5"></progress>
+        <!-- Keep in mind there is a progress bar in html <progress min, max, value > -->
+    </section>
+    <section>
+        <h2>This is a stand alone section</h2>
+        <p>This is a paragrph in the stand alone section</p>
+
+        <fig>
+            <p>Figure Thingy Goes Here</p>
+            <figcaption>Figure Caption Goes Here</figcaption>
+        </fig>
+        <aside>This is an aside.  Hello!</aside>
+    </section>
+    <table>
+        <thead>
+            <h1>Here is the header to the table</h1>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Here is a cell</td>
+                <td>Here is a cell</td>
+                <td>Here is a cell</td>
+            </tr>
+            <div>Here is the footer</div>
+        </tbody>
+    </table>
+
+    <!-- Use sections to delineate explicitly new sections in a page -->
+  <!-- This helps the browser more accurately parse the sections of the webpage -->
+  <!-- Try to stay away from div elements as section delineators because then has to be implied? -->
+</article>
